@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>اتصل بنا</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Scheherazade+New:wght@700&family=Cairo:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+<nav>
+  <a href="index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+  <a href="services.html"><i class="fa-solid fa-cogs"></i> الخدمات</a>
+  <a href="gallery.html"><i class="fa-solid fa-images"></i> المعرض</a>
+  <a href="contact.html"><i class="fa-solid fa-phone"></i> اتصل بنا</a>
+</nav>
+<header>
+    <img src="images/Logo.jpg" alt="شعار Evana" class="logo-img" />
+   
+  </header>
+
+<section class="contact" id="contact">
+  <h2 class="section-title">اتصل بنا</h2>
+  <div class="contact-info">
+    <p><i class="fa-solid fa-phone"></i> <a href="https://wa.me/963950088777" target="_blank">+963950088777</a></p>
+    <p><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/share/18g19FtPFV/" target="_blank">صفحتنا على فيسبوك</a></p>
+    <p><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/evana.palace?igsh=MXc0MTBpbGFxeGt3Mg==" target="_blank">انستغرام Ivana</a></p>
+    <p><i class="fa-solid fa-map-location-dot"></i> <a href="https://maps.app.goo.gl/KDfNEivqkiDSG3jH8" target="_blank">موقعنا على الخريطة</a></p>
+  </div>
+</section>
+<section class="review-stars">
+  <h3>⭐ تقييم الزوار</h3>
+  <div class="stars" id="starRating">
+    <span data-value="1">&#9734;</span>
+    <span data-value="2">&#9734;</span>
+    <span data-value="3">&#9734;</span>
+    <span data-value="4">&#9734;</span>
+    <span data-value="5">&#9734;</span>
+  </div>
+  <p id="thankYouMessage" style="display:none; color: goldenrod; font-weight: bold;">
+    شكراً لتقييمك!
+  </p>
+</section>
+<script>
+  const stars = document.querySelectorAll('#starRating span');
+  const message = document.getElementById('thankYouMessage');
+  let rated = false;
+
+  stars.forEach(star => {
+    star.addEventListener('click', () => {
+      if (rated) return;
+      const rating = parseInt(star.getAttribute('data-value'));
+      stars.forEach((s, index) => {
+        s.innerHTML = index < rating ? '★' : '☆';
+      });
+      message.style.display = 'block';
+      rated = true;
+    });
+  });
+</script>
+<footer>
+  <p>© 2025 – تصميم وتنفيذ: <strong>المهندسة هناء الريماوي</strong></p>
+</footer>
+
+</body>
+</html>
