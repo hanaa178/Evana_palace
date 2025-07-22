@@ -120,3 +120,19 @@ footer {
   color: gold;
   cursor: pointer;
 }
+
+.google-map {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.google-map h2 {
+  font-size: 1.4em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.google-map iframe {
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
