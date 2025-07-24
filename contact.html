@@ -18,6 +18,7 @@
 </nav>
 <header>
     <img src="images/Logo.jpg" alt="شعار Evana" class="logo-img" />
+    <p class="page-hint">⬆ استخدم الشريط العلوي للتنقل بين الأقسام: الخدمات، المعرض، والمزيد</p>
    
   </header>
 
@@ -74,6 +75,16 @@
 <footer>
   <p>© 2025 – تصميم وتنفيذ: <strong>المهندسة هناء الريماوي</strong></p>
 </footer>
-
+<a href="#" class="back-to-top">↑</a>
+<script>
+  const topBtn = document.querySelector(".back-to-top");
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 300) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  });
+</script>
 </body>
 </html>
